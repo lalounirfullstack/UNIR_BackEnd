@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('node:fs/promises');
 const dayjs = require('dayjs')
 
+// Initiates Express Instance
 const app = express();
 
 //To use request with JSON Format
