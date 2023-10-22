@@ -1,5 +1,11 @@
 ## Blog API
-
+*************************************************************
+                        DESCRIPCION
+*************************************************************
++ Build an application that allow the management of Blogs via API. 
++ This application allows to create Posts and associate them to a given Author.
++ Interaction with Posts and Authors is via HTTP Requests since there is User Interface.
++ Application handles the for basic CRUD functions. 
 *************************************************************
                         INSTRUCCIONES
 *************************************************************
