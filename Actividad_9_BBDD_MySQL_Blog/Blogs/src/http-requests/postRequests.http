@@ -1,0 +1,30 @@
+###
+GET http://localhost:3000/api/posts
+
+###
+GET http://localhost:3000/api/posts/31
+
+###
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+  "title": "JS Objects Deep Analysis",
+  "description": "JavaScript Object are the solution ...",
+  "category": "Front End Development",
+  "authors_id": 3
+}
+
+###
+PUT http://localhost:3000/api/posts/31
+Content-Type: application/json
+
+{
+  "title": "JS Objects in details",
+  "category": "Front End Development",
+  "updated_date": "2023-10-21 03:49:30",
+  "authors_id": 4
+}
+
+####
+DELETE http://localhost:3000/api/posts/31
