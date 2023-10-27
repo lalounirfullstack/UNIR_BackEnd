@@ -46,7 +46,7 @@ const insertAuthor = ({name, email, image})=>{
  * @returns {Query} Update records with provided data for the matching record id.
  */
 const updateAuthorById = (authorId, {name, email, image}) => {
-    return db.query('UPDATE authors SET name=?, email=?, image=? WHERE id=?',
+    return db.query('UPDATE authors SET name=IFNULL(?,name), email=IFNULL(?,email), image=IFNULL(?,image) WHERE id=?',
     [name, email, image, authorId]    )
 }
 

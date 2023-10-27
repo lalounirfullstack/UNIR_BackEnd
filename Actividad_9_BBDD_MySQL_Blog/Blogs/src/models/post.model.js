@@ -30,7 +30,7 @@ const insertPost = ({title, description, category, authors_id})=>{
 
 /**
  * Updates post record that matches given Id
- * @param id
+ * @param postId
  * @param title
  * @param description
  * @param category
@@ -45,7 +45,7 @@ const updatePostById = (postId, {title, description, category, updated_date, aut
 
 /**
  * Deletes posts record that matches given Id.
- * @param id
+ * @param postId
  * @returns {Query}
  */
 const deletePostById = (postId) => {

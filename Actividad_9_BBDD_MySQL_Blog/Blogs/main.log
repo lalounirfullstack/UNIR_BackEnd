@@ -34,3 +34,6 @@
 [27/10/2023 13:28:14] Method: DELETE. URL: /api/authors/19
 [27/10/2023 13:33:42] Method: DELETE. URL: /api/authors/19
 [27/10/2023 13:36:00] Method: PUT. URL: /api/authors/17
+[27/10/2023 14:09:55] Method: PUT. URL: /api/authors/17
+[27/10/2023 14:11:10] Method: PUT. URL: /api/authors/17
+[27/10/2023 14:11:49] Method: DELETE. URL: /api/authors/19
