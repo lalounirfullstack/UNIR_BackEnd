@@ -13,7 +13,7 @@ const getAuthors = async (req, res)=>{
 }
 
 const getAuthorById = async (req, res) =>{
-    const authorId = req.params.id;
+    const { authorId } = req.params;
     try{
         const [author] = await AuthorModel.selectAuthorById(authorId);
         res.json(author)
@@ -23,6 +23,24 @@ const getAuthorById = async (req, res) =>{
         })
     }
 }
+
+const getAuthorsByPage= async (req, res) =>{
+    const { p = 1 } = req.query;
+    const { limit = 10 } = req.query;
+
+    try{
+        const [authors] = await AuthorModel.selectAuthorsByPage(
+            parseInt(p),
+            parseInt(limit)
+        )
+        res.json(authors)
+    }catch(error){
+         res.json({
+            fatal: `Error: ${error.message}`
+        })
+    }
+}
+
 
 const createAuthor = async (req, res)=>{
     try{
@@ -38,7 +56,7 @@ const createAuthor = async (req, res)=>{
 
 
 const updateAuthor = async (req, res) =>{
-    const authorId = req.params.id;
+    const { authorId } = req.params;
     try{
         const [result] = await AuthorModel.updateAuthorById(authorId, req.body);
         res.json(result)
@@ -50,10 +68,11 @@ const updateAuthor = async (req, res) =>{
 }
 
 const deleteAuthor = async (req,res) =>{
-    const authorId = req.params.id;
+    const { authorId } = req.params;
+    console.log(authorId);
     try{
         const [result] = await AuthorModel.deleteAuthorById(authorId);
-        res.json(`Author deleted successfully`)
+        res.json(result)
     }catch(error){
         res.json({
             fatal: `Error: ${error.message}`
@@ -61,4 +80,4 @@ const deleteAuthor = async (req,res) =>{
     }
 }
 
-module.exports = { getAuthors, getAuthorById, createAuthor, updateAuthor, deleteAuthor }
+module.exports = { getAuthors, getAuthorById, createAuthor, updateAuthor, deleteAuthor, getAuthorsByPage }

@@ -1,13 +1,20 @@
 ## Blog API
 *************************************************************
-                        DESCRIPCION
+                        GENERAL INFO
+*************************************************************
++ Developer: Lalo Aguirre
++ Created Date: 10/29/2023
++ Last Update: 10/30/2023
+
+*************************************************************
+                        DESCRIPTION
 *************************************************************
 + Build an application that allow the management of Blogs via API. 
 + This application allows to create Posts and associate them to a given Author.
 + Interaction with Posts and Authors is via HTTP Requests since there is User Interface.
 + Application handles the for basic CRUD functions. 
 *************************************************************
-                        INSTRUCCIONES
+                        INSTRUCTIONS
 *************************************************************
 + Proyecto Tipo Blog
 
@@ -20,7 +27,7 @@
     + Updated_Date
     + Category
     + AuthorID (Foreign Key - Authors)
-  + Autores
+  + Authors
     + Id
     + Name
     + Email
@@ -50,7 +57,7 @@
 + mysql2
 
 *************************************************************
-                       Test Scenarios
+                       TESTING SCENARIOS
 *************************************************************
 1. MySQL Schema created from Model - Completed successfully
 2. MySQL Schema created from Script - Completed successfully

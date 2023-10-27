@@ -7,6 +7,9 @@ SELECT * FROM blogs.authors;
 /*Author By ID*/
 SELECT * FROM blogs.authors WHERE id=13;
 
+/*Authors by Page*/
+SELECT * FROM blogs.authors LIMIT 10 OFFSET 5;
+
 /*Authors with Posts*/
 SELECT a.*,
        p.*

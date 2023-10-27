@@ -2,7 +2,11 @@
 GET http://localhost:3000/api/authors
 
 ###
-GET http://localhost:3000/api/authors/5
+GET http://localhost:3000/api/authors/12
+
+
+###
+GET http://localhost:3000/api/authors/page?p=2&limit=3
 
 
 ###
@@ -10,13 +14,23 @@ POST http://localhost:3000/api/authors
 Content-Type: application/json
 
 {
-  "name": "George Bourgous II",
-  "email": "gbourgos43@gmail.com",
-  "image": "https://images.unsplash.com/photo-1559718062-361155fad299?auto=format&fit=crop&q=80&w=1287&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  "name": "Raul Bizarro",
+  "email": "raulbiza2023@gmail.com",
+  "image": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&q=80&w=1287&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 }
 
 ###
-PUT http://localhost:3000/api/authors/16
+POST http://localhost:3000/api/authors
+Content-Type: application/json
+
+{
+  "name": "Tamara Bolero",
+  "email": "tbolero_777@gmail.com",
+  "image": "https://images.unsplash.com/photo-1563132337-f159f484226c?auto=format&fit=crop&q=80&w=1287&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+}
+
+###
+PUT http://localhost:3000/api/authors/17
 Content-Type: application/json
 
 {
@@ -25,4 +39,4 @@ Content-Type: application/json
 }
 
 ####
-DELETE http://localhost:3000/api/authors/16
+DELETE http://localhost:3000/api/authors/19

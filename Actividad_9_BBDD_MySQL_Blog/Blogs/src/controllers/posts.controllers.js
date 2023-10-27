@@ -53,7 +53,7 @@ const deletePost = async (req,res) =>{
     const authorId = req.params.id;
     try{
         const [result] = await PostModel.deletePostById(authorId);
-        res.json(`Post deleted successfully`)
+        res.json(result)
     }catch(error){
         res.json({
             fatal: `Error: ${error.message}`
