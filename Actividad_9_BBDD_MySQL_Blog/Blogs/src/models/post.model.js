@@ -7,12 +7,22 @@ const getAllPosts = () =>{
 }
 
 /**
+ * Description: Finds and returns specific Post that matches a give postId.
+ * @param postId
+ * @returns {Query} Returns Post that matches post id
+ */
+const selectPostById = (postId) =>{
+    return db.query('SELECT * FROM posts WHERE id = ?', [postId]);
+}
+
+
+/**
  * Description:  Finds and returns all Posts created by a given Author.
  * @param authorId
  * @returns {Query} Posts that match AuthorId
  */
  const selectPostByAuthorId = (authorId) =>{
-    return db.query('SELECT * FROM posts WHERE id = ?', [authorId])
+    return db.query('SELECT * FROM posts WHERE author_id = ?', [authorId])
  }
 
 /**
@@ -23,24 +33,24 @@ const getAllPosts = () =>{
  * @param authors_id
  * @returns {Query} Insert records with title, description, category and author id data
  */
-const insertPost = ({title, description, category, authors_id})=>{
+const insertPost = ({title, description, category, author_id})=>{
     return db.query(
-        'INSERT INTO posts (title, description, category, authors_id) values(?,?,?,?)', [title, description, category, authors_id] )
+        'INSERT INTO posts (title, description, category, author_id) values(?,?,?,?)', [title, description, category, author_id] )
 }
 
 /**
- * Updates post record that matches given Id
+ * Updates post record that matches given Id.
  * @param postId
  * @param title
  * @param description
  * @param category
  * @param updated_date
- * @param authors_id
+ * @param author_id
  * @returns {Query} Update records with provided data for the matching record id.
  */
-const updatePostById = (postId, {title, description, category, updated_date, authors_id }) => {
-    return db.query('UPDATE posts SET title=IFNULL(?,title), description=IFNULL(?,description),category=IFNULL(?,category),updated_date=?, authors_id=IFNULL(?,authors_id)  WHERE id=?',
-    [title, description, category,updated_date, authors_id, postId])
+const updatePostById = (postId, {title, description, category, updated_date, author_id }) => {
+    return db.query('UPDATE posts SET title=IFNULL(?,title), description=IFNULL(?,description),category=IFNULL(?,category),updated_date=?, author_id=IFNULL(?,author_id)  WHERE id=?',
+    [title, description, category,updated_date, author_id, postId])
 }
 
 /**
@@ -52,4 +62,4 @@ const deletePostById = (postId) => {
     return db.query('DELETE FROM posts WHERE id=?', [postId])
 }
 
-module.exports = {getAllPosts, selectPostByAuthorId, insertPost, updatePostById, deletePostById }
+module.exports = {getAllPosts, selectPostById, selectPostByAuthorId, insertPost, updatePostById, deletePostById }

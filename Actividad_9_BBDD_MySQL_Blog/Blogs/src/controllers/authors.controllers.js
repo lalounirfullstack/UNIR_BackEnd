@@ -1,4 +1,5 @@
 const AuthorModel = require('../models/author.model')
+const PostModel = require("../models/post.model");
 
 const getAuthors = async (req, res)=>{
     try{
@@ -12,17 +13,38 @@ const getAuthors = async (req, res)=>{
     }
 }
 
-const getAuthorById = async (req, res) =>{
-    const { authorId } = req.params;
+const getAuthorsPosts = async(req, res)=>{
     try{
-        const [author] = await AuthorModel.selectAuthorById(authorId);
-        res.json(author)
+        const [authors] = await AuthorModel.getAllAuthors();
+        for(let author of authors) {
+            const [posts] = await PostModel.selectPostByAuthorId(author.id);
+            author.posts = posts
+        }
+        res.json(authors)
     }catch(error){
         res.json({
-            fatal: `Error: ${error.message}`
+            fatal: error.message
         })
     }
 }
+
+
+const getAuthorPosts = async(req, res)=>{
+    try{
+        const { authorId } = req.params;
+        const [authors] = await AuthorModel.selectAuthorById(authorId);
+        for(let author of authors) {
+            const [posts] = await PostModel.selectPostByAuthorId(authorId);
+            author.posts = posts
+        }
+        res.json(authors)
+    }catch(error){
+        res.json({
+            fatal: error.message
+        })
+    }
+}
+
 
 const getAuthorsByPage= async (req, res) =>{
     const { p = 1 } = req.query;
@@ -41,6 +63,17 @@ const getAuthorsByPage= async (req, res) =>{
     }
 }
 
+const getAuthorById = async (req, res) =>{
+    const { authorId } = req.params;
+    try{
+        const [author] = await AuthorModel.selectAuthorById(authorId);
+        res.json(author)
+    }catch(error){
+        res.json({
+            fatal: `Error: ${error.message}`
+        })
+    }
+}
 
 const createAuthor = async (req, res)=>{
     try{
@@ -80,4 +113,4 @@ const deleteAuthor = async (req,res) =>{
     }
 }
 
-module.exports = { getAuthors, getAuthorById, createAuthor, updateAuthor, deleteAuthor, getAuthorsByPage }
+module.exports = { getAuthorPosts, getAuthors, getAuthorsPosts, getAuthorsByPage, getAuthorById,  createAuthor, updateAuthor, deleteAuthor  }

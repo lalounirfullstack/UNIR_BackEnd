@@ -3,7 +3,6 @@ const PostModel = require('../models/post.model')
 const getPosts = async (req, res)=>{
     try{
         const [result] = await PostModel.getAllPosts();
-        console.log(result);
         res.json(result)
     }catch(error){
         res.json({
@@ -12,23 +11,24 @@ const getPosts = async (req, res)=>{
     }
 }
 
-const getPostByAuthorId = async (req, res) =>{
-    const authorId = req.params.id;
+const getPostById = async (req, res) =>{
+    const { postId } = req.params;
     try{
-        const [author] = await PostModel.selectPostByAuthorId(authorId);
-        res.json(author)
+        const [post] = await PostModel.selectPostById(postId);
+        res.json(post)
     }catch(error){
         res.json({
             fatal: `Error: ${error.message}`
         })
     }
 }
+
 
 const createPost = async (req, res)=>{
     try{
         const [result] = await PostModel.insertPost(req.body);
-        const [author] = await PostModel.selectPostByAuthorId(result.insertId);
-        res.json(author[0]);
+        const [post] = await PostModel.selectPostById(result.insertId);
+        res.json(post[0]);
     }catch(error){
         res.json({
             fatal: `Error: ${error.message}`
@@ -36,11 +36,10 @@ const createPost = async (req, res)=>{
     }
 }
 
-
 const updatePost = async (req, res) =>{
-    const authorId = req.params.id;
+    const { postId } = req.params;
     try{
-        const [result] = await PostModel.updatePostById(authorId, req.body);
+        const [result] = await PostModel.updatePostById(postId, req.body);
         res.json(result)
     }catch(error){
         res.json({
@@ -50,9 +49,9 @@ const updatePost = async (req, res) =>{
 }
 
 const deletePost = async (req,res) =>{
-    const authorId = req.params.id;
+    const { postId } = req.params;
     try{
-        const [result] = await PostModel.deletePostById(authorId);
+        const [result] = await PostModel.deletePostById(postId);
         res.json(result)
     }catch(error){
         res.json({
@@ -61,4 +60,4 @@ const deletePost = async (req,res) =>{
     }
 }
 
-module.exports = { getPosts, getPostByAuthorId, createPost, updatePost, deletePost }
+module.exports = { getPosts, getPostById, createPost, updatePost, deletePost }

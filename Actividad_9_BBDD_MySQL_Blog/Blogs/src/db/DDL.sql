@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `blogs`.`authors` (
   `image` VARCHAR(200) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 17
+AUTO_INCREMENT = 29
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
 
@@ -41,15 +41,17 @@ CREATE TABLE IF NOT EXISTS `blogs`.`posts` (
   `description` VARCHAR(255) NULL DEFAULT NULL,
   `created_date` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   `category` VARCHAR(100) NULL DEFAULT NULL,
-  `authors_id` INT NOT NULL,
   `updated_date` DATETIME NULL DEFAULT NULL,
-  PRIMARY KEY (`id`, `authors_id`),
-  INDEX `fk_posts_authors_idx` (`authors_id` ASC) VISIBLE,
+  `author_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_posts_authors_idx` (`author_id` ASC) VISIBLE,
   CONSTRAINT `fk_posts_authors`
-    FOREIGN KEY (`authors_id`)
-    REFERENCES `blogs`.`authors` (`id`))
+    FOREIGN KEY (`author_id`)
+    REFERENCES `blogs`.`authors` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 31
+AUTO_INCREMENT = 32
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
 

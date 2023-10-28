@@ -2,7 +2,7 @@
 GET http://localhost:3000/api/posts
 
 ###
-GET http://localhost:3000/api/posts/31
+GET http://localhost:3000/api/posts/57
 
 ###
 POST http://localhost:3000/api/posts
@@ -12,19 +12,39 @@ Content-Type: application/json
   "title": "JS Objects Deep Analysis",
   "description": "JavaScript Object are the solution ...",
   "category": "Front End Development",
-  "authors_id": 3
+  "author_id": 3
 }
 
 ###
-PUT http://localhost:3000/api/posts/31
+POST http://localhost:3000/api/posts
 Content-Type: application/json
 
 {
-  "title": "JS Objects in details",
-  "category": "Front End Development",
-  "updated_date": "2023-10-21 03:49:30",
-  "authors_id": 4
+  "title": "AI Intelligence deep dive",
+  "description": "In the last few month AI ...",
+  "category": "Artificial Intelligence",
+  "author_id": 3
+}
+
+###
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+  "title": "GraphQl the new way",
+  "description": "GraphQL is the new way ...",
+  "category": "BackEnd Development",
+  "author_id": 8
+}
+
+###
+PUT http://localhost:3000/api/posts/65
+Content-Type: application/json
+
+{
+  "title": "GraphQl the new way of ",
+  "description": "GraphQL has position ..."
 }
 
 ####
-DELETE http://localhost:3000/api/posts/31
+DELETE http://localhost:3000/api/posts/39

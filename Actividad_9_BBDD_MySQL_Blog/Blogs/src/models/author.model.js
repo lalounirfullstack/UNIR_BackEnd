@@ -15,6 +15,7 @@ const getAllAuthors = () =>{
     return db.query('SELECT * FROM authors WHERE id = ?', [authorId])
  }
 
+
 /**
  * Description: Query number of records starting at a given position
  * @param page

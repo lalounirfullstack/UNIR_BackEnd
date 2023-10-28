@@ -5,7 +5,7 @@
 SELECT * FROM blogs.authors;
 
 /*Author By ID*/
-SELECT * FROM blogs.authors WHERE id=13;
+SELECT * FROM blogs.authors WHERE id=10;
 
 /*Authors by Page*/
 SELECT * FROM blogs.authors LIMIT 10 OFFSET 5;
@@ -14,7 +14,7 @@ SELECT * FROM blogs.authors LIMIT 10 OFFSET 5;
 SELECT a.*,
        p.*
 FROM blogs.authors a
-JOIN blogs.posts p ON a.id=p.authors_id;
+JOIN blogs.posts p ON a.id=p.author_id;
 
 /*Update Author*/
 UPDATE blogs.authors
