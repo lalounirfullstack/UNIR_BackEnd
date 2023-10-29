@@ -1,15 +1,15 @@
 const router = require('express').Router();
 const AuthorsController = require('../../controllers/authors.controllers')
+const Middleware = require('../../middlewares/author.middleware')
 
 
 router.get('/', AuthorsController.getAuthors);
 router.get('/posts', AuthorsController.getAuthorsPosts);
-router.get('/posts/:authorId', AuthorsController.getAuthorPosts);
+router.get('/posts/:authorId', Middleware.validateAuthor,AuthorsController.getAuthorPosts);
 router.get('/page', AuthorsController.getAuthorsByPage);
-router.get('/:authorId', AuthorsController.getAuthorById);
+router.get('/:authorId', Middleware.validateAuthor, AuthorsController.getAuthorById);
 router.post('/', AuthorsController.createAuthor);
-router.put('/:authorId', AuthorsController.updateAuthor)
-router.delete('/:authorId', AuthorsController.deleteAuthor)
-
+router.put('/:authorId', Middleware.validateAuthor, AuthorsController.updateAuthor)
+router.delete('/:authorId', Middleware.validateAuthor, AuthorsController.deleteAuthor)
 
 module.exports = router;
