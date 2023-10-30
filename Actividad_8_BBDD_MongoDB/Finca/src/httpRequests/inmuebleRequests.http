@@ -1,8 +1,16 @@
+#####################################################
+                   GETS
+#####################################################
+
 ###
 GET http://localhost:3000/api/inmuebles
 
 ###
-GET  http://localhost:3000/api/inmuebles/65288f77ac2b63411a1a137c
+GET  http://localhost:3000/api/inmuebles/653fcbf59727402f1c35127c
+
+#####################################################
+                   POSTS
+#####################################################
 
 ###
 POST http://localhost:3000/api/inmuebles
@@ -31,20 +39,184 @@ Content-Type: application/json
     "mailPropietario": "takumayiu567@gmail.com"
 }
 
-
-### UPDATE
-PUT http://localhost:3000/api/inmuebles/653ea5796afc34135aef5edf
+###
+POST http://localhost:3000/api/inmuebles
 Content-Type: application/json
 
 {
-   "piso":"33",
-    "letra":"CAT-2",
-    "extension": 8,
-    "habitaciones":4,
-    "alquilado": true,
-    "propietario": "Vulmaro Crown SR.",
-    "mailPropietario": "crown_910@gmail.com"
+    "piso":"5",
+    "letra":"C",
+    "extension": 1000,
+    "habitaciones":2,
+    "alquilado": false,
+    "propietario": "Bon Carson",
+    "mailPropietario": "carson_78@hotmail.com"
 }
 
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"20",
+    "letra":"D",
+    "extension": 2000,
+    "habitaciones":3,
+    "alquilado": true,
+    "propietario": "Rachel Green",
+    "mailPropietario": "rachel_green45@hotmail.com"
+}
+
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"9",
+    "letra":"H",
+    "extension": 2500,
+    "habitaciones":4,
+    "alquilado": true,
+    "propietario": "Rick Arora",
+    "mailPropietario": "arora@yahoo.com"
+}
+
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"19",
+    "letra":"T",
+    "extension": 3500,
+    "habitaciones":5,
+    "alquilado": true,
+    "propietario": "Santiago Cabrera",
+    "mailPropietario": "santi_cabrera@gmail.com"
+}
+
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"15",
+    "letra":"D",
+    "extension": 1500,
+    "habitaciones":3,
+    "alquilado": true,
+    "propietario": "Tony Lopez",
+    "mailPropietario": "lopez45@gmail.com"
+}
+
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"13",
+    "letra":"E",
+    "extension": 2500,
+    "habitaciones":4,
+    "alquilado": true,
+    "propietario": "Diego Serrano",
+    "mailPropietario": "mrserrano@gmail.com"
+}
+
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"4",
+    "letra":"G",
+    "extension": 2500,
+    "habitaciones":4,
+    "alquilado": false,
+    "propietario": "Rogelio Bonilla",
+    "mailPropietario": "rbonilla@gmail.com"
+}
+
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"16",
+    "letra":"J",
+    "extension": 3500,
+    "habitaciones":6,
+    "alquilado": false,
+    "propietario": "Tania Floyd",
+    "mailPropietario": "tfloyd455@gmail.com"
+}
+
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"24",
+    "letra":"T",
+    "extension": 3500,
+    "habitaciones":6,
+    "alquilado": true,
+    "propietario": "Ericka Palavichini",
+    "mailPropietario": "erickaPalava_78@gmail.com"
+}
+
+#####################################################
+                   UPDATES
+#####################################################
+
+###
+PUT http://localhost:3000/api/inmuebles/653fe1bc9727402f1c35128f
+Content-Type: application/json
+
+{
+    "piso":"24",
+    "letra":"T-2",
+    "extension": 3500,
+    "habitaciones":8,
+    "alquilado": true,
+    "propietario": "Ericka Palavichini",
+    "mailPropietario": "erickaPalava_78@gmail.com"
+}
+
+#####################################################
+                   POST & UPDATE
+#####################################################
+
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"8",
+    "letra":"F",
+    "extension": 3500,
+    "habitaciones":6,
+    "alquilado": true,
+    "propietario": "Peter Russell",
+    "mailPropietario": "p_rusell_890@gmail.com"
+}
+
+### UPDATE
+PUT http://localhost:3000/api/inmuebles/653fcd549727402f1c35127e
+Content-Type: application/json
+
+{
+    "piso":"9",
+    "letra":"F",
+    "extension": 3500,
+    "habitaciones":6,
+    "alquilado": true,
+    "propietario": "Peter Russell Senior",
+    "mailPropietario": "p_rusell_890@gmail.com"
+}
+
+#####################################################
+                   DELETES
+#####################################################
 ### DELETE
-DELETE http://localhost:3000/api/inmuebles/653ea5796afc34135aef5edf
+DELETE http://localhost:3000/api/inmuebles/65401d4b3ae515a27a606db1

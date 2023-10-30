@@ -17,12 +17,7 @@ const server = http.createServer(app);
 const PORT = process.env.PORT || 3000
 
 // Connection to MongoDB
-  mongoose
-    .connect(process.env.MONGO_URI, {
-    dbName: process.env.MONGO_DB,
-    useNewUrlParser: true, // Add these options for compatibility
-    useUnifiedTopology: true,
-  })
+mongoose.connect(process.env.MONGO_URL)
   .then(() => {
     console.log('MongoDB Connected');
     server.listen(PORT, () => {
