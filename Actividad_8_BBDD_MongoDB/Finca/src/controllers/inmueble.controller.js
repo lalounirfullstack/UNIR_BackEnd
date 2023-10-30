@@ -1,5 +1,5 @@
-//const InmuebleModel = require('../model/inmueble.model')
-const InmuebleModel = require('../model/inmueble.model')
+//const InmuebleModel = require('../models/inmueble.models')
+const InmuebleModel = require('../models/inmueble.model')
 
 const getInmuebles = async (req, res)=>{
     try{
@@ -15,9 +15,9 @@ const getInmuebles = async (req, res)=>{
 
 const getInmuebleById = async (req, res) =>{
     try{
-        const id = req.params.id;
-        console.log(`Param ID: ${id}`);
-        const inmueble = await InmuebleModel.selectInmuebleById(id);
+        const { inmuebleId } = req.params
+        console.log(`Param ID: ${inmuebleId}`);
+        const inmueble = await InmuebleModel.selectInmuebleById(inmuebleId);
         res.json(inmueble);
     }catch(error){
         res.json({
@@ -39,27 +39,22 @@ const createInmueble = async (req, res)=>{
 
 const updateInmueble = async (req, res)=>{
     try{
-        const id = req.params.id;
-        const inmueble = await InmuebleModel.updateInmuebleById(id, req.body);
-        if(!inmueble){
-            return res.status(404).json({message: `Inmueble ${inmueble} cannot be found !`});
-        }else {
-            const updatedInmueble = await InmuebleModel.selectInmuebleById(id);
-            res.json(updatedInmueble)
-        }
-    }catch(error){
-      console.log(`Error: ${error.message}`)
-      res.status(500).json({message: error.message})
+        const { inmuebleId } = req.params;
+        console.log(inmuebleId);
+        const result = await InmuebleModel.updateInmuebleById(inmuebleId, req.body);
+        res.json(result)
+    }catch(error) {
+        res.json({
+            fatal: error.message
+        })
     }
 }
 
 const deleteInmueble = async (req, res) =>{
    try{
-      const id = req.params.id;
-      const inmueble = await InmuebleModel.deleteInmuebleById(id);
-      if(!inmueble){
-        return res.status(404).json({message: `Inmueble ${inmueble} cannot be found`});
-      }
+      const { inmuebleId } = req.params;
+       console.log(inmuebleId);
+      const inmueble = await InmuebleModel.deleteInmuebleById(inmuebleId);
       res.json(inmueble);
     }catch(error){
       console.log(`Error: ${error.message}`)

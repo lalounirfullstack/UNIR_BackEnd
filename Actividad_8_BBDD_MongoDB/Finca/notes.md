@@ -67,3 +67,15 @@ Estrutura:
 *************************************************************
                        Test Scenarios
 *************************************************************
+1. Express Structure - Completed Successfully
+2. MongoDB Model  - Completed successfully
+2. Inmueble HTTP requests (CRUD):
+   + Create Inmueble
+   + Read Inmueble (List of Inmuebles)
+   + Update Inmueble
+   + Delete Inmueble
+4. Revalidate invalid Request using Middleware
+   + Verify Valid Author Request 
+   + Verify Invalid Author Request
+   + Verify Valid Post Request 
+   + Verify Invalid Post Request

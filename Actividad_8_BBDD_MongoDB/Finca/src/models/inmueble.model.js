@@ -6,8 +6,8 @@ const selectInmuebles = async () =>{
 
 //db.inmuebles.find()
 
-const selectInmuebleById = (id) =>{
-    return Inmueble.findById(id)
+const selectInmuebleById = (inmuebleId) =>{
+    return Inmueble.findById(inmuebleId)
 }
 
 // db.inmuebles.find({"_id":ObjectId('65288d3bb8eb0a52431cbe05')})
@@ -16,12 +16,12 @@ const insertInmueble = (body) =>{
  return Inmueble.create(body);
 }
 
-const updateInmuebleById = (id, body) =>{
-    return Inmueble.findByIdAndUpdate(id, body);
+const updateInmuebleById = (inmuebleId, body) =>{
+    return Inmueble.findByIdAndUpdate(inmuebleId, body, {new: true});
 }
 
-const deleteInmuebleById = (id)=>{
-    return Inmueble.findByIdAndDelete(id);
+const deleteInmuebleById = (inmuebleId)=>{
+    return Inmueble.findByIdAndDelete(inmuebleId);
 }
 
 module.exports = { selectInmuebles, selectInmuebleById, insertInmueble, updateInmuebleById, deleteInmuebleById  }
