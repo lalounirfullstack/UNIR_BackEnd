@@ -2,7 +2,7 @@
 GET http://localhost:3000/api/posts
 
 ###
-GET http://localhost:3000/api/posts/35
+GET http://localhost:3000/api/posts/25
 
 ###
 POST http://localhost:3000/api/posts
@@ -38,7 +38,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/api/posts/65
+PUT http://localhost:3000/api/posts/29
 Content-Type: application/json
 
 {
@@ -47,4 +47,4 @@ Content-Type: application/json
 }
 
 ####
-DELETE http://localhost:3000/api/posts/39
+DELETE http://localhost:3000/api/posts/29

@@ -11,7 +11,7 @@ GET http://localhost:3000/api/authors/posts/3
 GET http://localhost:3000/api/authors/page?p=2&limit=3
 
 ###
-GET http://localhost:3000/api/authors/99
+GET http://localhost:3000/api/authors/5
 
 ###
 POST http://localhost:3000/api/authors
@@ -44,7 +44,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/api/authors/14
+PUT http://localhost:3000/api/authors/13
 Content-Type: application/json
 
 {
@@ -53,4 +53,4 @@ Content-Type: application/json
 }
 
 ####
-DELETE http://localhost:3000/api/authors/144
+DELETE http://localhost:3000/api/authors/13

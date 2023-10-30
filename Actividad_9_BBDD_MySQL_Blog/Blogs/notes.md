@@ -41,7 +41,7 @@
                         RUBRICA
 *************************************************************
 + Correct Creation of tables & fields 0.5 - 5%
-+ Correct Creation of Express Proyect 0.5 - 5%
++ Correct Creation of Express Project 0.5 - 5%
 + Correct Creation of Routes for the API base  1 - 10%
 + Correct Creation of URLs to support Posts CRUD ("Post and Get")   3 - 30%
 + Correct Creation of URLs to support Authors CRUD ("Post and Get") 3 - 30%
@@ -71,3 +71,8 @@
    + Read Post (Posts from a given Actor)
    + Update Posts
    + Delete Posts
+5. Revalidate invalid Request using Middleware
+   + Verify Valid Author Request 
+   + Verify Invalid Author Request
+   + Verify Valid Post Request 
+   + Verify Invalid Post Request
