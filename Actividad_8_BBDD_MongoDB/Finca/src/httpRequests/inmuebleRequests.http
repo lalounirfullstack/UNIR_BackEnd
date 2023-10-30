@@ -1,0 +1,36 @@
+###
+GET http://localhost:3000/api/inmuebles
+
+###
+GET  http://localhost:3000/api/inmuebles/65288f77ac2b63411a1a137c
+
+###
+POST http://localhost:3000/api/inmuebles
+Content-Type: application/json
+
+{
+    "piso":"18",
+    "letra":"AB",
+    "extension": 8200,
+    "habitaciones":8,
+    "alquilado": true,
+    "propietario": "Ramiro Vallarta",
+    "mailPropietario": "rvallarta999@gmail.com"
+}
+
+### UPDATE
+PUT http://localhost:3000/api/inmuebles/6535d1886aef1c7a397dacd8
+Content-Type: application/json
+
+{
+   "piso":"33",
+    "letra":"C-A",
+    "extension": 10,
+    "habitaciones":4,
+    "alquilado": true,
+    "propietario": "Hana Monsier JR.",
+    "mailPropietario": "hmonsier20@gmail.com"
+}
+
+### DELETE
+DELETE http://localhost:3000/api/inmuebles/6535d1886aef1c7a397dacd8
