@@ -28,7 +28,7 @@ const login = async (req, res) =>{
         if(!equals){
             return res.json({fatal: 'Error en Email o Password'})
         }
-        res.json('Login Correcto !')
+        res.json('Login Successfully !')
 
     }catch(error){
         res.json({
