@@ -50,6 +50,7 @@
 + nodemon
 + daysjs
 + mysql2
++ bycriptjs
 
 *************************************************************
                        SOLUTION 
@@ -78,6 +79,6 @@ Estrutura:
    + Verify Invalid Author Request
    + Verify Valid Post Request 
    + Verify Invalid Post Request
+5. Revalidate User Registration and Authentication
 
-MONGO_URI='mongodb+srv://root:Nikopancho1102@unirfullstack.pctqqu4.mongodb.net/Finca?retryWrites=true&w=majority'
-MONGO_DB='finca'
+
