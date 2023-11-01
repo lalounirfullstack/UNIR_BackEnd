@@ -12,6 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 //Main API Route
-app.use('/api/inmuebles', require('./routes/inmueble'))
+app.use('/api/inmuebles', require('./routes/inmueble'));
+app.use('/api/users', require('./routes/users'));
+
 
 module.exports = app;
