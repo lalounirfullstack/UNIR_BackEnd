@@ -23,7 +23,7 @@ Content-Type: application/json
     "habitaciones":5,
     "alquilado": true,
     "propietario": "Vulmaro Crown",
-    "mailPropietario": "crown910@gmail.com"
+    "mailContacto": "crown910@gmail.com"
 }
 ###
 POST http://localhost:3000/api/inmuebles
@@ -36,7 +36,7 @@ Content-Type: application/json
     "habitaciones":6,
     "alquilado": true,
     "propietario": "Takuma Yiu",
-    "mailPropietario": "takumayiu567@gmail.com"
+    "mailContacto": "takumayiu567@gmail.com"
 }
 
 ###
@@ -50,7 +50,7 @@ Content-Type: application/json
     "habitaciones":2,
     "alquilado": false,
     "propietario": "Bon Carson",
-    "mailPropietario": "carson_78@hotmail.com"
+    "mailContacto": "carson_78@hotmail.com"
 }
 
 ###
@@ -64,7 +64,7 @@ Content-Type: application/json
     "habitaciones":3,
     "alquilado": true,
     "propietario": "Rachel Green",
-    "mailPropietario": "rachel_green45@hotmail.com"
+    "mailContacto": "rachel_green45@hotmail.com"
 }
 
 ###
@@ -78,7 +78,7 @@ Content-Type: application/json
     "habitaciones":4,
     "alquilado": true,
     "propietario": "Rick Arora",
-    "mailPropietario": "arora@yahoo.com"
+    "mailContacto": "arora@yahoo.com"
 }
 
 ###
@@ -92,7 +92,7 @@ Content-Type: application/json
     "habitaciones":5,
     "alquilado": true,
     "propietario": "Santiago Cabrera",
-    "mailPropietario": "santi_cabrera@gmail.com"
+    "mailContacto": "santi_cabrera@gmail.com"
 }
 
 ###
@@ -106,7 +106,7 @@ Content-Type: application/json
     "habitaciones":3,
     "alquilado": true,
     "propietario": "Tony Lopez",
-    "mailPropietario": "lopez45@gmail.com"
+    "mailContacto": "lopez45@gmail.com"
 }
 
 ###
@@ -120,7 +120,7 @@ Content-Type: application/json
     "habitaciones":4,
     "alquilado": true,
     "propietario": "Diego Serrano",
-    "mailPropietario": "mrserrano@gmail.com"
+    "mailContacto": "mrserrano@gmail.com"
 }
 
 ###
@@ -134,7 +134,7 @@ Content-Type: application/json
     "habitaciones":4,
     "alquilado": false,
     "propietario": "Rogelio Bonilla",
-    "mailPropietario": "rbonilla@gmail.com"
+    "mailContacto": "rbonilla@gmail.com"
 }
 
 ###
@@ -148,7 +148,7 @@ Content-Type: application/json
     "habitaciones":6,
     "alquilado": false,
     "propietario": "Tania Floyd",
-    "mailPropietario": "tfloyd455@gmail.com"
+    "mailContacto": "tfloyd455@gmail.com"
 }
 
 ###
@@ -162,7 +162,7 @@ Content-Type: application/json
     "habitaciones":6,
     "alquilado": true,
     "propietario": "Ericka Palavichini",
-    "mailPropietario": "erickaPalava_78@gmail.com"
+    "mailContacto": "erickaPalava_78@gmail.com"
 }
 
 #####################################################
@@ -170,7 +170,7 @@ Content-Type: application/json
 #####################################################
 
 ###
-PUT http://localhost:3000/api/inmuebles/653fe1bc9727402f1c35128f
+PUT http://localhost:3000/api/inmuebles/6544d50e879252b3f4375e64
 Content-Type: application/json
 
 {
@@ -180,7 +180,7 @@ Content-Type: application/json
     "habitaciones":8,
     "alquilado": true,
     "propietario": "Ericka Palavichini",
-    "mailPropietario": "erickaPalava_78@gmail.com"
+    "mailContacto": "erickaPalava_78@gmail.com"
 }
 
 #####################################################
@@ -198,11 +198,11 @@ Content-Type: application/json
     "habitaciones":6,
     "alquilado": true,
     "propietario": "Peter Russell",
-    "mailPropietario": "p_rusell_890@gmail.com"
+    "mailContacto": "p_rusell_890@gmail.com"
 }
 
 ### UPDATE
-PUT http://localhost:3000/api/inmuebles/653fcd549727402f1c35127e
+PUT http://localhost:3000/api/inmuebles/6544d54f879252b3f4375e68
 Content-Type: application/json
 
 {
@@ -212,11 +212,11 @@ Content-Type: application/json
     "habitaciones":6,
     "alquilado": true,
     "propietario": "Peter Russell Senior",
-    "mailPropietario": "p_rusell_890@gmail.com"
+    "mailContacto": "p_rusell_890@gmail.com"
 }
 
 #####################################################
                    DELETES
 #####################################################
 ### DELETE
-DELETE http://localhost:3000/api/inmuebles/65419dfb898788a7799001f8
+DELETE http://localhost:3000/api/inmuebles/6544d54f879252b3f4375e68
