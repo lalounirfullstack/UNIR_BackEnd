@@ -1,5 +1,5 @@
 //const InmuebleModel = require('../models/inmueble.model');
-const InmuebleModel = require('../dbModels/inmueble.model') ;
+const InmuebleModel = require('../dbmodels/inmueble.model') ;
 
 const checkInmuebleId = async (req, res, next)=>{
     //Comprobar si el valor de Prodct ID de los parameter es un ID Correcto

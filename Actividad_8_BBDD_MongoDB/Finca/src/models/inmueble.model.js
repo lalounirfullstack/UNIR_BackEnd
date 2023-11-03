@@ -1,4 +1,4 @@
-const Inmueble = require("../dbModels/inmueble.model");
+const Inmueble = require("../dbmodels/inmueble.model");
 
 const selectInmuebles = async () =>{
     return Inmueble.find({});

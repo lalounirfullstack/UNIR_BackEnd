@@ -4,7 +4,7 @@ const InmuebleModel = require('../models/inmueble.model')
 const getInmuebles = async (req, res)=>{
     try{
         const result = await InmuebleModel.selectInmuebles();
-        console.log(`Retrieved All Inmueble Records: \n ${result}`);
+        console.log(`Retrieved All Inmuebles Records: \n ${result}`);
         res.json(result);
     }catch(error){
         res.json({
@@ -16,7 +16,6 @@ const getInmuebles = async (req, res)=>{
 const getInmuebleById = async (req, res) =>{
     try{
         const { inmuebleId } = req.params
-        console.log(`Param ID: ${inmuebleId}`);
         const inmueble = await InmuebleModel.selectInmuebleById(inmuebleId);
         res.json(inmueble);
     }catch(error){
@@ -40,12 +39,11 @@ const createInmueble = async (req, res)=>{
 const updateInmueble = async (req, res)=>{
     try{
         const { inmuebleId } = req.params;
-        console.log(inmuebleId);
         const result = await InmuebleModel.updateInmuebleById(inmuebleId, req.body);
         res.json(result)
     }catch(error) {
         res.json({
-            fatal: error.message
+            fatal: `Error: ${error.message}`
         })
     }
 }
@@ -53,7 +51,6 @@ const updateInmueble = async (req, res)=>{
 const deleteInmueble = async (req, res) =>{
    try{
       const { inmuebleId } = req.params;
-       console.log(inmuebleId);
       const inmueble = await InmuebleModel.deleteInmuebleById(inmuebleId);
       res.json(inmueble);
     }catch(error){

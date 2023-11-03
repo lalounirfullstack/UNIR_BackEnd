@@ -34,7 +34,7 @@ const inmuebleSchema = mongoose.Schema(
                 type: String,
                 required: false
             },
-        mailPropietario:
+        mailContacto:
             {
                 type: String,
                 required:false

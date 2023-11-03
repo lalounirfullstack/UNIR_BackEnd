@@ -6,7 +6,7 @@
 *************************************************************
 + Developer: Lalo Aguirre
 + Created Date: 10/29/2023
-+ Last Update: 10/30/2023
++ Last Update: 11/03/2023
 
 *************************************************************
                         DESCRIPTION
@@ -60,6 +60,8 @@ Estrutura:
 + app.js - Main application that references Routes.
 + routes > inmuebles.js - CRUD routes.
 + model > inmueble.js - Inmueble Model.
++ middlewares - revalidates is Inmueble exsits to do updates
++ dbmodels > mongoDB find queries for inmueble and users
 + controllers . inmuebles.controller.js functions to execute CRUD.
 + fincaRequest.http - Request ejecution.
 + env - definicion of Port and Database
@@ -80,5 +82,6 @@ Estrutura:
    + Verify Valid Post Request 
    + Verify Invalid Post Request
 5. Revalidate User Registration and Authentication
+6. Invalid Requests - show errors
 
 
