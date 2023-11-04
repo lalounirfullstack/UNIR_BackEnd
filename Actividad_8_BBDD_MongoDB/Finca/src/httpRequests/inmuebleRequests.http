@@ -202,7 +202,7 @@ Content-Type: application/json
 }
 
 ### UPDATE
-PUT http://localhost:3000/api/inmuebles/6544d54f879252b3f4375e68
+PUT http://localhost:3000/api/inmuebles/654659d30dfd1bdf61875d8c
 Content-Type: application/json
 
 {
@@ -219,4 +219,4 @@ Content-Type: application/json
                    DELETES
 #####################################################
 ### DELETE
-DELETE http://localhost:3000/api/inmuebles/6544d54f879252b3f4375e68
+DELETE http://localhost:3000/api/inmuebles/654659d30dfd1bdf61875d8c
