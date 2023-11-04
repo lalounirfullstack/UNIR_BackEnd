@@ -74,3 +74,22 @@ Content-Type: application/json
     "email": "sandrabullock@gmail.com",
     "password": "12345"
 }
+
+###
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+    "username": "tomhanks",
+    "email": "tomhanks@gmail.com",
+    "password": "12345"
+}
+
+###
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "tomhanks@gmail.com",
+    "password": "12345"
+}
